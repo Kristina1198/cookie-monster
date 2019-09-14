@@ -1,2 +1,4 @@
-class ApplicationController < ActionController::Base
+Rails.application.routes.draw do
+  root 'places#index'
+  resources :places
 end

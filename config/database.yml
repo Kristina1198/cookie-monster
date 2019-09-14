@@ -27,7 +27,7 @@ default: &default
 development:
   <<: *default
   database: jadester_development
-  # username: nomster
+  # username: jadester
   # password: <%= ENV['NOMSTER_DATABASE_PASSWORD'] %>
 
   # The specified database role being used to connect to postgres.
