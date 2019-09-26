@@ -3,10 +3,12 @@ class PlacesController < ApplicationController
 
   def index
     @places = Place.all
+    #puts "current user=#{current_user.places}"
   end
 
   def new
     @place = Place.new
+    puts "do index method"
   end
 
   def create
