@@ -21,6 +21,7 @@ module Jadester
     # Precompile additional assets
     config.assets.precompile += %w( .woff .ttf )
 
-
+    config.assets.initialize_on_precompile = false
+    
   end
 end
