@@ -111,3 +111,8 @@
     <small><%= comment.user.email %></small>
   </blockquote>
 </div>
+
+<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+  <%= f.input :text %>
+  <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
+<% end %>
