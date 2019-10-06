@@ -25,7 +25,7 @@
   </script>
 
   <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuDV6VGEW6UxSeaVsUYBHIVlMiQwW-TRE&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTv2EjKik_7uaZ-ilt0YCwqQV_pj31eIA&callback=initMap">
   </script>
 
   <div id="map"></div>
@@ -43,16 +43,6 @@
 </div>  
 <div class="clear"></div>
 
-<%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
-  <%= f.input :message %>
-  <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
-  <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
-<% end %>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Add a comment 
-</button>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -102,17 +92,8 @@
   <% end %>
 </div> 
 
-<div class="col-12 col-sm-6">
-  <blockquote>
-    <% if comment.humanized_rating.present? %>
-      <b><%= comment.humanized_rating %></b> -
-    <% end %>
-    <%= comment.message %>
-    <small><%= comment.user.email %></small>
-  </blockquote>
-</div>
-
-<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-  <%= f.input :text %>
-  <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
-<% end %>
+<%= simple_form_for @photo, url: place_photos_path(@place) do |Photo| %>
+  <%= t.input :caption%>
+  <%= t.input :place_id%>
+  <%= t.submit "Add a Photo", class: 'btn btn-primary' %>
+<% end %> 
