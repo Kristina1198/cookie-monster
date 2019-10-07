@@ -92,8 +92,9 @@
   <% end %>
 </div> 
 
-<%= simple_form_for @photo, url: place_photos_path(@place) do |Photo| %>
+<%= simple_form_for @photo, url: place_photos_path(@place) do |t| %>
   <%= t.input :caption%>
   <%= t.input :place_id%>
+  <%= t.input :picture %>
   <%= t.submit "Add a Photo", class: 'btn btn-primary' %>
-<% end %> 
+  <% end %> 
