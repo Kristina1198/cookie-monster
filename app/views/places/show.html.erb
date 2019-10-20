@@ -77,7 +77,6 @@
   </button>
 </div>
 
- 
 
 <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#photoModal">
   Add a photo
@@ -120,6 +119,15 @@
       <small><%= comment.user.email %></small>
     </blockquote>
    </div>
-  <% end %>
+<% end %>
 
+<% @place.photos.each do |photo| %>
+  <div>
+    <blockquote>
+      <b><%= photo.caption %></b> -
+      <%= image_tag photo.picture.to_s, class: 'img-fluid' %>
+      <small><%= photo.user.email %></small>
+    </blockquote>
+  </div>
+<% end %>
 
