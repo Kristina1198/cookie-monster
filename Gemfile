@@ -68,7 +68,7 @@ gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'devise'
 gem 'geocoder'
-gem 'carrierwave', '~> 2.0.2'
+gem 'carrierwave', '~> 2.1.1'
 gem 'figaro'
 gem 'fog-aws'
 source 'https://rails-assets.org' do
